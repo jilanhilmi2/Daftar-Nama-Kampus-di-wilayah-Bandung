@@ -1,0 +1,184 @@
+package main
+import "fmt"
+
+const NMAX int = 1000
+
+type data {
+	var PTN string
+	var PTS string
+	var PTK string
+	var daerah string
+}
+type Camaba  {
+	var nama string
+	var asal sekolah string
+	var asal daerah string
+	var umur int
+}
+
+func main() {
+	var A, B int
+	var pilih string
+
+	fmt.Println("Selamat Datang di Website Kami ")
+	fmt.Println("1. Pilih Lokasi ")
+	fmt.Println("2. Jalur Pendaftaran ")
+	fmt.Println("3. Jenis Perguruan Tinggi  ")
+	fmt.Println("Pilih Salah Satu : ")
+	fmt.Scanln(&pilih)
+	
+	if pilih == "1" {
+		pilihLokasi(*A,B)
+	} else if pilih == "2" {
+		jalurDaftar(*A,B)
+	} else {
+		jenisPerguruan(*A,B)
+	}
+	
+	
+	
+func pilihLokasi(A *data, B int){
+	
+	var x, y, z string
+	
+	fmt.Println("Pilih Lokasi Kampus: ")
+	fmt.Println("1. Kota Bandung ")
+	fmt.Println("2. Kabupaten Bandung ")
+	fmt.Println("3. Kabupaten Bandung Barat ")
+	fmt.Print("Pilih Lokasi : ")
+	fmt.Scan(&pilih)
+	
+	if pilih == 1 {
+		A[x].data = "	1. Institut Teknologi Bandung (ITB) 
+						2. Universitas Pendidikan Indonesia (UPI) 
+						3. Politeknik POS Indonesia (Poltek POS)
+						4. Politeknik Negeri Bandung (POLBAN)
+						5. Politeknik Kesehatan Bandung (Poltekes Bandung)
+						6. Sekolah Tinggi Ilmu Administrasi Lembaga Administrasi Negara (STIA-LAN) 
+						7. Universitas Islam Bandung (UNISBA)
+						8. Universitas Katolik Parahyangan (UNPAR)  
+						9. Universitas Kristen Maranatha (MARNAT) 
+						10. Universitas Widyatama (UTAMA)
+						11. Universitas Sangga Buana YPKP (USB) 
+						12. Universitas Komputer Indonesia (UNIKOM) 
+						13. Universitas Pasundan (UNPAS) "  
+	
+	} else if pilih == 2 {
+		A[X].data = "	1. Telkom University (Tel-U) 
+						2. UIN Sunan Gunung Djati (UIN-SGD) "
+		
+	} else {
+		A[X].data = "Tidak ada Perguruan Tinggi di Kabupaten Bandung Barat ")
+	}
+}
+
+func jalurDaftar(A *data, B int){
+	fmt.Println("1. SNMPTN ")
+	fmt.Println("2. SBMPTN ")
+	fmt.Println("3. Mandiri ")
+	fmt.Println("4. Tes Khusus ")
+	fmt.Print("Pilih Jalur Daftar :")
+	fmt.Scan(&pilih)
+	
+	if pilih == 1 {
+		A[x].data = "	1. Institut Teknologi Bandung (ITB) 
+						2. Universitas Pendidikan Indonesia (UPI) "  
+	
+	} else if pilih == 2 {
+		A[X].data = "	1. Institut Teknologi Bandung (ITB) 
+						2. Universitas Pendidikan Indonesia (UPI) " 
+		
+	} else if pilih == 3{
+		A[X].data = "	1. 	Institut Teknologi Bandung (ITB) 
+						2. 	Universitas Pendidikan Indonesia (UPI)
+						3. 	Telkom University (Tel-U) 
+						4. 	UIN Sunan Gunung Djati (UIN-SGD)
+						5. 	Universitas Islam Bandung (UNISBA)
+						6. 	Universitas Katolik Parahyangan (UNPAR)  
+						7. 	Universitas Kristen Maranatha (MARNAT) 
+						8. 	Universitas Widyatama (UTAMA)
+						9. 	Universitas Sangga Buana YPKP (USB) 
+						10. Universitas Komputer Indonesia (UNIKOM) 
+						11. Universitas Pasundan (UNPAS) "
+	} else {
+		A[X].data = "	1. Politeknik POS Indonesia (Poltek POS)
+						2. Politeknik Negeri Bandung (POLBAN)
+						3. Politeknik Kesehatan Bandung (Poltekes Bandung)
+						4. Sekolah Tinggi Ilmu Administrasi Lembaga Administrasi Negara (STIA-LAN) "
+	}
+}
+
+func jenisPerguruan(A *data, B int){
+
+	fmt.Println("1. Negeri ")
+	fmt.Println("2. Swasta ")
+	fmt.Println("3. Kedinasan ")
+	fmt.Print("Pilih Jenis Perguruan Tinggi : ")
+	fmt.Scan(&pilih)
+	
+	if pilih == 1 {
+		A[x].data = "	1. Institut Teknologi Bandung (ITB) 
+						2. Universitas Pendidikan Indonesia (UPI) "  
+	
+	} else if pilih == 2 {
+		A[X].data = "	1. 	Telkom University (Tel-U) 
+						2. 	UIN Sunan Gunung Djati (UIN-SGD)
+						3. 	Universitas Islam Bandung (UNISBA)
+						4. 	Universitas Katolik Parahyangan (UNPAR)  
+						5. 	Universitas Kristen Maranatha (MARNAT) 
+						6. 	Universitas Widyatama (UTAMA)
+						7. 	Universitas Sangga Buana YPKP (USB) 
+						8. 	Universitas Komputer Indonesia (UNIKOM) 
+						9. 	Universitas Pasundan (UNPAS) "
+		
+	} else {
+		A[X].data = "	1. Politeknik POS Indonesia (Poltek POS)
+						2. Politeknik Negeri Bandung (POLBAN)
+						3. Politeknik Kesehatan Bandung (Poltekes Bandung)
+						4. Sekolah Tinggi Ilmu Administrasi Lembaga Administrasi Negara (STIA-LAN) "
+	}
+
+func EditData(A *data, B int){
+	var X string
+	var i int
+	fmt.Println("Cari Perguruan Tinggi Yang Akan di Edit :")
+	fmt.Scan(&f)
+	
+		for X:=0; X < i && j++ {
+			if B[X].nama == X {
+				fmt.Print("pilih lokasi Kampus :")
+				fmt.Scan(&B[X].nama)
+				fmt.Print("pilih kampus yang akan di edit :")
+				fmt.Scan(&B[j].kampus)
+			} else {
+			fmt.Println("Pilih Data Yang Akan Diubah")
+			}
+	}
+}
+func Pendaftar(A *datap, B int ){
+	
+	fmt.Println(" Masukan Data Pendaftar")
+	fmt.Println( )
+	fmt.Print("Nama :")
+	fmt.Scan(&A[i].nama)
+	fmt.Print("Umur :")
+	fmt.Scan(&B[i].umur)
+	fmt.Print("Nomor HP :")
+	fmt.Scan(&B[i].nohp)
+	fmt.Print("Asal Sekolah :")
+	fmt.Scan(&B[i].asalsekolah)
+	fmt.Print("Asal Daerah :")
+	fmt.Scan(&B[i].asaldaerah)
+	fmt.Print("Email :")
+	fmt.Scan(&B[i].email)
+	
+	fmt.Println("===Data Pendaftar===")
+	fmt.Println("Nama				: ",A[i].nama)
+	fmt.Println("Umur				: ",A[i].umur)
+	fmt.Println("Nomor Handphone 	: ",A[i].nohp)
+	fmt.Println("Asal Sekolah	 	: ",A[i].asalsekolah)
+	fmt.Println("Asal Daerah 		: ",A[i].asaldaerah)
+	fmt.Println("Email			 	: ",A[i].email)
+	fmt.Print("==================")
+	fmt.Scanln(&read)
+}
